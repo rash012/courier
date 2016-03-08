@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
 fourseven:scss
 francocatena:compass
+ian:accounts-ui-bootstrap-3
+accounts-password
