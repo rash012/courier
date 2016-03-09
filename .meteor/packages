@@ -19,7 +19,10 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 twbs:bootstrap
 fourseven:scss
 francocatena:compass
-ian:accounts-ui-bootstrap-3
 accounts-password
 iron:router
 sacha:spin
+audit-argument-checks
+check
+underscore
+ian:accounts-ui-bootstrap-3

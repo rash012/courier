@@ -2,7 +2,10 @@
   <div class="order">
     <div class="order-content">
       <h3><span>Откуда: {{from}}</span><span>Куда: {{to}}</span></h3>
+      <p>
+        {{#if isAdmin}}<a href="{{pathFor 'orderEdit'}}">Edit</a>{{/if}}
+      </p>
     </div>
-    <a href="{{pathFor 'orderPage'}}" class="discuss btn btn-default">Discuss</a>
+    <a href="{{pathFor 'orderPage'}}" class="discuss btn btn-default">Забрать</a>
   </div>
 </template>

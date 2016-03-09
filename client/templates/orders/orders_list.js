@@ -1,5 +1,5 @@
 Template.ordersList.helpers({
   orders: function () {
-    return Orders.find();
+    return Orders.find({}, {sort: {submitted: -1}});
   }
 });

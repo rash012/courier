@@ -1,5 +1,5 @@
 Template.orderSubmit.events({
-  'submit form': function(e) {
+  'submit form': function (e) {
     e.preventDefault();
 
     var order = {
@@ -7,7 +7,12 @@ Template.orderSubmit.events({
       to: $(e.target).find('[name=to]').val()
     };
 
-    order._id = Orders.insert(order);
-    Router.go('orderPage', order);
+    Meteor.call('orderInsert', order, function (error, result) {
+      // display the error to the user and abort
+      if (error)
+        return throwError(error.reason);
+
+      Router.go('orderPage', {_id: result._id});
+    });
   }
 });
