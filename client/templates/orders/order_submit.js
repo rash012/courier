@@ -9,10 +9,9 @@ Template.orderSubmit.events({
 
     Meteor.call('orderInsert', order, function (error, result) {
       // display the error to the user and abort
-      if (error)
-        return throwError(error.reason);
+      if (error) return throwError(error.reason);
 
-      Router.go('orderPage', {_id: result._id});
+      Router.go('ordersList', {_id: result._id});
     });
   }
 });
