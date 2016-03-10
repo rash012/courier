@@ -1,5 +1,7 @@
 <template name="orderEdit">
-  <form class="main form page">
+  <div class="page">
+    <h4>Редактирование заявки</h4>
+  <form class="main form">
     <div class="form-group">
       <label class="control-label" for="from">Откуда забрать заказ</label>
       <div class="controls">
@@ -12,8 +14,9 @@
         <input name="to" id="to" type="text" value="{{to}}" placeholder="Куда доставить" class="form-control"/>
       </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <input type="submit" value="Подтвердить" class="btn btn-primary submit"/>
     <hr/>
     <a class="btn btn-danger delete" href="#">Удалить заявку</a>
   </form>
+  </div>
 </template>

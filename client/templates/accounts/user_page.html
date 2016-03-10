@@ -1,0 +1,9 @@
+<template name="userPage">
+  <div class="orders page">
+    <h4>Страница пользователя {{username}}</h4>
+    <h5>Принятые заявки</h5>
+    {{#each orders}}
+      {{> acceptedOrderItem}}
+    {{/each}}
+  </div>
+</template>

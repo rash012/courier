@@ -1,17 +1,20 @@
 <template name="accountCreate">
-  <form class="main form page">
-    <div class="form-group">
-      <label class="control-label" for="login">Логин</label>
-      <div class="controls">
-        <input name="login" id="login" type="text" value="" placeholder="Логин" class="form-control" required/>
+  <div class="page">
+    <h4>Создание аккаунта</h4>
+    <form class="main form">
+      <div class="form-group">
+        <label class="control-label" for="login">Логин</label>
+        <div class="controls">
+          <input name="login" id="login" type="text" value="" placeholder="Логин" class="form-control" required/>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label" for="password">Пароль</label>
-      <div class="controls">
-        <input name="password" id="password" type="text" value="" placeholder="Пароль" class="form-control" required/>
+      <div class="form-group">
+        <label class="control-label" for="password">Пароль</label>
+        <div class="controls">
+          <input name="password" id="password" type="text" value="" placeholder="Пароль" class="form-control" required/>
+        </div>
       </div>
-    </div>
-    <input type="submit" value="Создать аккаунт" class="btn btn-primary"/>
-  </form>
+      <input type="submit" value="Создать аккаунт" class="btn btn-primary"/>
+    </form>
+  </div>
 </template>

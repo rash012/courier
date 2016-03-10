@@ -1,17 +1,20 @@
 <template name="orderSubmit">
-  <form class="main form page">
-    <div class="form-group">
-      <label class="control-label" for="from">Откуда забрать заказ</label>
-      <div class="controls">
-        <input name="from" id="from" type="text" value="" placeholder="Откуда забрать заказ" class="form-control"/>
+  <div class="page">
+    <h4>Создание заявки</h4>
+    <form class="main form">
+      <div class="form-group">
+        <label class="control-label" for="from">Откуда забрать заказ</label>
+        <div class="controls">
+          <input name="from" id="from" type="text" value="" placeholder="Откуда забрать заказ" class="form-control"/>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label" for="to">Куда доставить</label>
-      <div class="controls">
-        <input name="to" id="to" type="text" value="" placeholder="Куда доставить" class="form-control"/>
+      <div class="form-group">
+        <label class="control-label" for="to">Куда доставить</label>
+        <div class="controls">
+          <input name="to" id="to" type="text" value="" placeholder="Куда доставить" class="form-control"/>
+        </div>
       </div>
-    </div>
-    <input type="submit" value="Создать заявку" class="btn btn-primary"/>
-  </form>
+      <input type="submit" value="Создать заявку" class="btn btn-primary"/>
+    </form>
+  </div>
 </template>
