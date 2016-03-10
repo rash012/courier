@@ -1,8 +1,8 @@
 <template name="acceptedOrdersList">
   <div class="orders page">
-    <h4>Принятые заявки</h4>
+    <h4>Принятые заявки пользователя {{username}}</h4>
     {{#each orders}}
-      {{> orderItem}}
+      {{> acceptedOrderItem}}
     {{/each}}
   </div>
 </template>

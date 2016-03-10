@@ -1,4 +1,4 @@
-<template name="orderItem">
+<template name="acceptedOrderItem">
   <div class="order">
     <div class="order-content">
       <h3><span>Откуда: {{from}}</span><span>Куда: {{to}}</span></h3>
@@ -6,8 +6,5 @@
         {{#if isAdmin}}<a href="{{pathFor 'orderEdit'}}">Редактировать</a>{{/if}}
       </p>
     </div>
-    {{#if currentUser}}
-      <a href="" class="discuss btn btn-default" id="take-order">Забрать</a>
-    {{/if}}
   </div>
 </template>
