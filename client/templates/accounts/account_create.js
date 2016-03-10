@@ -15,7 +15,10 @@ Template.accountCreate.events({
       }
       if (result){
         if(result.accountExists) alert('Аккаунт с таким логином уже существует');
-        else alert('Аккаунт создан')
+        else {
+          alert('Аккаунт успешно создан');
+          $('form').trigger('reset');
+        }
       }
     });
   }

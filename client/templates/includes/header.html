@@ -12,7 +12,9 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if currentUser}}
+          {{#unless isAdmin}}
           <li><a href="{{pathFor 'acceptedOrdersList'}}">Принятые заявки</a></li>
+          {{/unless}}
         {{/if}}
         {{#if isAdmin}}
           <li><a href="{{pathFor 'orderSubmit'}}">Создать заявку</a></li>
