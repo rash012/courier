@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav">
         {{#if currentUser}}
           {{#unless isAdmin}}
-          <li><a href="{{pathFor 'acceptedOrdersList'}}">Принятые заявки</a></li>
+            <li><a href="{{pathFor 'acceptedOrdersList'}}">Принятые заявки</a></li>
           {{/unless}}
         {{/if}}
         {{#if isAdmin}}

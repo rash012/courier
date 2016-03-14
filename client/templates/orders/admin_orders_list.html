@@ -1,0 +1,8 @@
+<template name="adminOrdersList">
+  <div class="orders page">
+    <h4>Полный список заявок</h4>
+    {{#each orders}}
+      {{> adminOrderItem}}
+    {{/each}}
+  </div>
+</template>

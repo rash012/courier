@@ -7,7 +7,9 @@
       </p>
     </div>
     {{#if currentUser}}
-      <a href="" class="discuss btn btn-default" id="take-order">Забрать</a>
+      {{#unless isAdmin}}
+        <a href="" class="discuss btn btn-default" id="take-order">Забрать</a>
+      {{/unless}}
     {{/if}}
   </div>
 </template>

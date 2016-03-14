@@ -3,9 +3,9 @@
     <h4>Создание аккаунта</h4>
     <form class="main form">
       <div class="form-group">
-        <label class="control-label" for="login">Логин</label>
+        <label class="control-label" for="login">Логин (не менее 3-х символов)</label>
         <div class="controls">
-          <input name="login" id="login" type="text" value="" placeholder="Логин" class="form-control" required/>
+          <input name="login" id="login" type="text" value="" placeholder="Логин" class="form-control" required pattern=".{3,}"/>
         </div>
       </div>
       <div class="form-group">
