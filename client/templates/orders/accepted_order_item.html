@@ -8,5 +8,10 @@
         {{#if isAdmin}}<a href="{{pathFor 'orderEdit'}}">Редактировать</a>{{/if}}
       </p>
     </div>
+    {{#if currentUser}}
+      {{#unless isAdmin}}
+        <a href="" class="discuss btn btn-default" id="order-done">Исполнено</a>
+      {{/unless}}
+    {{/if}}
   </div>
 </template>
