@@ -1,7 +1,14 @@
 <template name="adminOrderItem">
   <div class="order">
     <div class="order-content">
-      <h3><span>Откуда: {{from}}</span><span>Куда: {{to}}</span></h3>
+      <h3><span>Откуда: {{from}}</span><span>Куда: {{to}}</span><span>Статус: {{status}}</span>
+        {{#if ownerName}}
+          <span>Принял пользователь: {{ownerName}}</span>
+        {{/if}}
+        <!--{{#if remainingTime}}-->
+          <!--<span>Осталось: {{remainingTime}}</span>-->
+        <!--{{/if}}-->
+      </h3>
       <p>
         <a href="{{pathFor 'orderEdit'}}">Редактировать</a>
       </p>

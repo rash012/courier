@@ -1,0 +1,8 @@
+<template name="expiredOrdersList">
+  <div class="orders page">
+    <h4>Список просроченных заявок</h4>
+    {{#each orders}}
+      {{> adminOrderItem}}
+    {{/each}}
+  </div>
+</template>

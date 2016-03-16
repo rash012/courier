@@ -11,6 +11,7 @@
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
+        <li><a href="{{pathFor 'messagesList'}}">Чат</a></li>
         {{#if currentUser}}
           {{#unless isAdmin}}
             <li><a href="{{pathFor 'acceptedOrdersList'}}">Принятые заявки</a></li>
@@ -20,6 +21,7 @@
           <li><a href="{{pathFor 'orderSubmit'}}">Создать заявку</a></li>
           <li><a href="{{pathFor 'accountCreate'}}">Создать аккаунт</a></li>
           <li><a href="{{pathFor 'usersList'}}">Пользователи</a></li>
+          <li><a href="{{pathFor 'adminOrdersList'}}">Полный список заявок</a></li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">

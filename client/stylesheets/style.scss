@@ -21,13 +21,14 @@ $black_10: rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px $black_15;
 }
 
-
 .grid-block {
   @extend %extend_1;
 }
+
 .main {
   @extend %extend_1;
 }
+
 .order {
   @extend %extend_1;
   *zoom: 1;
@@ -86,6 +87,7 @@ $black_10: rgba(0, 0, 0, 0.1);
     margin-top: 7px;
   }
 }
+
 .comments {
   list-style-type: none;
   margin: 0;
@@ -107,13 +109,16 @@ $black_10: rgba(0, 0, 0, 0.1);
     }
   }
 }
+
 .comment-form {
   @extend %extend_1;
 }
+
 body {
   background: $color_gallery_approx;
   color: $color_storm_dust_approx;
 }
+
 .navbar {
   margin-bottom: 10px;
   .navbar-inner {
@@ -121,9 +126,11 @@ body {
     border-radius: 0 0 3px 3px;
   }
 }
+
 #spinner {
   height: 300px;
 }
+
 .load-more {
   display: block;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
@@ -138,6 +145,7 @@ body {
     background: $black_10;
   }
 }
+
 .jumbotron {
   text-align: center;
   h2 {
@@ -145,6 +153,7 @@ body {
     font-weight: 100;
   }
 }
+
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 0;
@@ -159,6 +168,7 @@ body {
     opacity: 0;
   }
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 0;
@@ -173,6 +183,7 @@ body {
     opacity: 0;
   }
 }
+
 .errors {
   position: fixed;
   z-index: 10000;
@@ -183,6 +194,7 @@ body {
   bottom: 0;
   pointer-events: none;
 }
+
 .alert {
   animation: fadeOut 2700ms ease-in 0s 1 forwards;
   width: 250px;
@@ -191,6 +203,7 @@ body {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
 .dropdown-menu span {
   display: block;
   padding: 3px 20px;
@@ -199,7 +212,13 @@ body {
   color: $color_pink_swan_approx;
   white-space: nowrap;
 }
+
 .orders .spinner-container {
   position: relative;
   height: 100px;
+}
+
+.messages {
+  height: 280px;
+  overflow: auto;
 }

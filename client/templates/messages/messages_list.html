@@ -1,0 +1,11 @@
+<template name="messagesList">
+  <h4>Чат</h4>
+  <div class="messages page main">
+    {{#each messages}}
+      {{> messageItem}}
+    {{/each}}
+  </div>
+  {{#if currentUser}}
+    {{>messageSubmit}}
+  {{/if}}
+</template>

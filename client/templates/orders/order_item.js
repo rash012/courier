@@ -3,11 +3,18 @@ Template.orderItem.events({
 
     var currentOrderId = this._id;
 
-    Orders.update(currentOrderId, {$set: {ownerId: Meteor.userId()}}, function (error) {
+    Orders.update(currentOrderId, {
+      $set: {
+        ownerId: Meteor.userId(),
+        status: 'accepted',
+        ownerName: Meteor.user().username
+      }
+    }, function (error) {
       if (error) {
         // display the error to the user
         throwError(error.reason);
       }
+
     });
   }
 });
