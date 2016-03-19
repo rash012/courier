@@ -5,6 +5,7 @@ Template.orderSubmit.events({
     var order = {
       from: $(e.target).find('[name=from]').val(),
       to: $(e.target).find('[name=to]').val(),
+      type: $(e.target).find('[name=type]').val(),
     };
 
     Meteor.call('orderInsert', order, function (error, result) {

@@ -2,7 +2,7 @@
 
 Template.adminOrderItem.helpers({
   //remainingTime: function () {
-  //  if (this.status !== 'free') {
+  //  if (this.status !== 'свободна') {
   //    remainingTime.set('0:0');
   //    return remainingTime.get();
   //  }
@@ -15,4 +15,8 @@ Template.adminOrderItem.helpers({
   //
   //  return remainingTime.get();
   //}
+
+  isPossibleEdit: function () {
+    return this.status === 'свободна';
+  }
 });

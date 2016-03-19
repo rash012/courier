@@ -1,15 +1,16 @@
 Template.orderEdit.events({
-  'submit form': function(e) {
+  'submit form': function (e) {
     e.preventDefault();
 
     var currentOrderId = this._id;
 
     var orderProperties = {
       from: $(e.target).find('[name=from]').val(),
-      to: $(e.target).find('[name=to]').val()
+      to: $(e.target).find('[name=to]').val(),
+      type: $(e.target).find('[name=type]').val()
     };
 
-    Orders.update(currentOrderId, {$set: orderProperties}, function(error) {
+    Orders.update(currentOrderId, {$set: orderProperties}, function (error) {
       if (error) {
         // display the error to the user
         throwError(error.reason);
@@ -19,7 +20,7 @@ Template.orderEdit.events({
     });
   },
 
-  'click .delete': function(e) {
+  'click .delete': function (e) {
     e.preventDefault();
 
     if (confirm("Удалить эту заявку?")) {
@@ -28,4 +29,15 @@ Template.orderEdit.events({
       Router.go('ordersList');
     }
   }
+
 });
+
+Template.orderEdit.destroyed = function () {
+  if (!this.data) return;
+  Orders.update(this.data._id, {$set: {status: 'свободна'}}, function (error) {
+    if (error) {
+      // display the error to the user
+      throwError(error.reason);
+    }
+  });
+};

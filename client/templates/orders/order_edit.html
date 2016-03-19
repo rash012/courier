@@ -1,22 +1,29 @@
 <template name="orderEdit">
   <div class="page">
     <h4>Редактирование заявки</h4>
-  <form class="main form">
-    <div class="form-group">
-      <label class="control-label" for="from">Откуда забрать заказ</label>
-      <div class="controls">
-        <input name="from" id="from" type="text" value="{{from}}" placeholder="Откуда забрать заказ" class="form-control"/>
+    <form class="main form">
+      <div class="form-group">
+        <label class="control-label" for="from">Откуда забрать заказ</label>
+        <div class="controls">
+          <input name="from" id="from" type="text" value="{{from}}" required placeholder="Откуда забрать заказ"
+                 class="form-control"/>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label" for="to">Куда доставить</label>
-      <div class="controls">
-        <input name="to" id="to" type="text" value="{{to}}" placeholder="Куда доставить" class="form-control"/>
+      <div class="form-group">
+        <label class="control-label" for="to">Куда доставить</label>
+        <div class="controls">
+          <input name="to" id="to" type="text" value="{{to}}" required placeholder="Куда доставить" class="form-control"/>
+        </div>
       </div>
-    </div>
-    <input type="submit" value="Подтвердить" class="btn btn-primary submit"/>
-    <hr/>
-    <a class="btn btn-danger delete" href="#">Удалить заявку</a>
-  </form>
+      <div class="form-group">
+        <label class="control-label" for="type">Тип посылки</label>
+        <div class="controls">
+          <input name="type" id="type" type="text" value="{{type}}" placeholder="Тип посылки" class="form-control"/>
+        </div>
+      </div>
+      <input type="submit" value="Подтвердить" class="btn btn-primary submit"/>
+      <hr/>
+      <a class="btn btn-danger delete" href="#">Удалить заявку</a>
+    </form>
   </div>
 </template>

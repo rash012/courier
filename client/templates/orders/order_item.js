@@ -6,7 +6,7 @@ Template.orderItem.events({
     Orders.update(currentOrderId, {
       $set: {
         ownerId: Meteor.userId(),
-        status: 'accepted',
+        status: 'принята',
         ownerName: Meteor.user().username
       }
     }, function (error) {
@@ -14,8 +14,8 @@ Template.orderItem.events({
         // display the error to the user
         throwError(error.reason);
       }
-
     });
   }
 });
+
 
