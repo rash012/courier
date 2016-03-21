@@ -17,6 +17,6 @@ Template.adminOrderItem.helpers({
   //}
 
   isPossibleEdit: function () {
-    return this.status === 'свободна';
+    return this.status === orderStatusFree;
   }
 });

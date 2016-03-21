@@ -5,7 +5,13 @@
         <span>Откуда: {{from}}</span><span>Куда: {{to}}</span><span>Тип посылки: {{type}}</span>
         <span>Время создания заявки: {{submitted}}</span><span>Статус: {{status}}</span>
         {{#if ownerName}}
-          <span>Принял пользователь: {{ownerName}}</span>
+          <span>Принял пользователь: <a href="{{pathFor 'adminUserPage' username=ownerName}}">{{ownerName}}</a></span>
+        {{/if}}
+        {{#if accepted}}
+          <span>Время принятия заявки:{{accepted}}</span>
+        {{/if}}
+        {{#if done}}
+          <span>Время исполнения заявки:{{done}}</span>
         {{/if}}
         <!--{{#if remainingTime}}-->
         <!--<span>Осталось: {{remainingTime}}</span>-->

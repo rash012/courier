@@ -1,8 +1,17 @@
-Meteor.publish('orders', function () {
-  if (this.userId === adminId) {
-    return Orders.find();
+Meteor.publish('orders', function (options) {
+  if (options) {
+    check(options, {
+      sort: Object,
+      limit: Number
+    });
   }
-  else return Orders.find({$or: [{ownerId: this.userId}, {ownerId: {$exists: false}}]});
+  if (this.userId === adminId) {
+    return Orders.find({}, options);
+  }
+  else return Orders.find({
+    $or: [{ownerId: this.userId}, {ownerId: {$exists: false}}],
+    status: {$nin: [orderStatusExpired, orderStatusEdit]}
+  }, options);
 });
 
 Meteor.publish('users', function () {

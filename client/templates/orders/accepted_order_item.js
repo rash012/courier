@@ -5,7 +5,8 @@ Template.acceptedOrderItem.events({
 
     Orders.update(currentOrderId, {
       $set: {
-        status: 'исполнена'
+        status: orderStatusDone,
+        done: new Date()
       }
     }, function (error) {
       if (error) {

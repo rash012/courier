@@ -2,7 +2,11 @@
   <div class="orders page">
     <h4>Принятые заявки пользователя {{username}}</h4>
     {{#each orders}}
-      {{> acceptedOrderItem}}
+      {{#if isAdmin}}
+        {{> adminOrderItem}}
+      {{else}}
+        {{> acceptedOrderItem}}
+      {{/if}}
     {{/each}}
   </div>
 </template>

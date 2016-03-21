@@ -15,7 +15,7 @@ Template.orderEdit.events({
         // display the error to the user
         throwError(error.reason);
       } else {
-        Router.go('orderPage', {_id: currentOrderId});
+        Router.go('adminOrdersList');
       }
     });
   },
@@ -34,7 +34,9 @@ Template.orderEdit.events({
 
 Template.orderEdit.destroyed = function () {
   if (!this.data) return;
-  Orders.update(this.data._id, {$set: {status: 'свободна'}}, function (error) {
+  if (Orders.findOne({_id: this.data._id}).status !== orderStatusEdit)return;
+
+  Orders.update(this.data._id, {$set: {status: orderStatusFree}}, function (error) {
     if (error) {
       // display the error to the user
       throwError(error.reason);

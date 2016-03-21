@@ -15,8 +15,9 @@
         {{#if currentUser}}
           {{#unless isAdmin}}
             <li><a href="{{pathFor 'acceptedOrdersList'}}">Принятые заявки</a></li>
+            <li><a href="{{pathFor 'doneOrdersList'}}">Исполненные заявки</a></li>
           {{/unless}}
-          <li><a href="{{pathFor 'doneOrdersList'}}">Исполненные заявки</a></li>
+
         {{/if}}
         {{#if isAdmin}}
           <li><a href="{{pathFor 'orderSubmit'}}">Создать заявку</a></li>
