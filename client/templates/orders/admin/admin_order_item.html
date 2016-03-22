@@ -8,10 +8,11 @@
           <span>Принял пользователь: <a href="{{pathFor 'adminUserPage' username=ownerName}}">{{ownerName}}</a></span>
         {{/if}}
         {{#if accepted}}
-          <span>Время принятия заявки:{{accepted}}</span>
+          <span>Время принятия заявки: {{accepted}}</span>
         {{/if}}
         {{#if done}}
-          <span>Время исполнения заявки:{{done}}</span>
+          <span>Время исполнения заявки: {{done}}</span>
+          <span>Длительность исполнения заявки: {{orderExecutionDuration}}</span>
         {{/if}}
         <!--{{#if remainingTime}}-->
         <!--<span>Осталось: {{remainingTime}}</span>-->

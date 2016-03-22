@@ -8,7 +8,7 @@ Template.adminOrderItem.helpers({
   //  }
   //  var submitted;
   //  if (!(submitted = this.submitted)) return;
-  //  var secondsRemaining = Math.ceil((submitted.getTime() - new Date + orderDuration) / (1000));
+  //  var secondsRemaining = Math.ceil((submitted.getTime() - new Date + orderFreeLimitTime) / (1000));
   //  var minutes = Math.floor(secondsRemaining / 60);
   //  var seconds = secondsRemaining % 60;
   //  remainingTime.set(minutes + ':' + seconds);

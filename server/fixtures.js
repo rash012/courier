@@ -50,4 +50,17 @@ Meteor.startup(function () {
   }
 
   adminId = Meteor.users.findOne({username: 'admin'})._id;
+
+
+  //проверяем нет ли истекших заявок среди свободных и делаем их истекшими
+  (function () {
+    var freeOrders = Orders.find({status: {$in: [orderStatusFree, orderStatusEdit]}}).fetch();
+    var expiredOrders = _.filter(freeOrders, function (el) {
+      return (new Date - el.submitted) > orderFreeLimitTime;
+    });
+    _.each(expiredOrders, function (el) {
+      Orders.update(el._id, {$set: {status: orderStatusExpired}});
+    });
+  })();
 });
+

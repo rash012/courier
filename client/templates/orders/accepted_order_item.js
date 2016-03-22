@@ -3,20 +3,19 @@ Template.acceptedOrderItem.events({
 
     var currentOrderId = this._id;
 
-    Orders.update(currentOrderId, {
-      $set: {
-        status: orderStatusDone,
-        done: new Date()
-      }
-    }, function (error) {
+    Meteor.call('orderDone', currentOrderId, function (error) {
       if (error) {
         // display the error to the user
         throwError(error.reason);
       }
-
     });
   }
 });
 
+Template.acceptedOrderItem.helpers({
+  remainingTime: function () {
+    return;
+  }
+});
 
 
