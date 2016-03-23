@@ -1,12 +1,11 @@
-<template name="adminOrdersList">
+<template name="adminUserOrdersList">
   <div class="orders page">
-    <h4>Полный список заявок</h4>
+    <h4>Заявки пользователя <a href="{{pathFor 'adminUserPage'}}">{{username}}</a></h4>
     <div class="form-group">
       <select id="status-select" class="form-control width-auto">
         <option value="all" selected>Все</option>
         <option value="accepted">Принятые</option>
         <option value="done">Исполненные</option>
-        <option value="expired">Истекшие</option>
       </select>
     </div>
     {{#each orders}}

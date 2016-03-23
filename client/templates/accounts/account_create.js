@@ -6,7 +6,10 @@ Template.accountCreate.events({
 
     var account = {
       username: $(e.target).find('[name=login]').val(),
-      password: $(e.target).find('[name=password]').val()
+      password: $(e.target).find('[name=password]').val(),
+      name: $(e.target).find('[name=name]').val(),
+      surname: $(e.target).find('[name=surname]').val(),
+      tel: $(e.target).find('[name=tel]').val(),
     };
 
     Meteor.call('createAccount', account, function(error, result){

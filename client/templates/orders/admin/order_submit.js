@@ -12,7 +12,7 @@ Template.orderSubmit.events({
       // display the error to the user and abort
       if (error) return throwError(error.reason);
 
-      Router.go('adminOrdersList', {_id: result._id});
+      Router.go('adminOrdersList');
     });
   }
 });

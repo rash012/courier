@@ -1,12 +1,12 @@
 var status= ReactiveVar('all');
 
-Template.adminOrdersList.events({
+Template.adminUserOrdersList.events({
   'change select': function () {
     status.set($('select option:selected').val());
   }
 });
 
-Template.adminOrdersList.helpers({
+Template.adminUserOrdersList.helpers({
   orders: function () {
     switch (status.get()) {
       case 'all':
@@ -15,13 +15,11 @@ Template.adminOrdersList.helpers({
         return this.acceptedOrders;
       case 'done':
         return this.doneOrders;
-      case 'expired':
-        return this.expiredOrders;
       default:
         return this.orders;
     }
   }
 });
-Template.adminOrdersList.destroyed = function(){
+Template.adminUserOrdersList.destroyed = function(){
   status.set('all');
 };

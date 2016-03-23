@@ -7,8 +7,6 @@ Template.orderItem.events({
       if (error) {
         // display the error to the user
         throwError(error.reason);
-      } else {
-        //Meteor.call('setOrderTimer', currentOrderId);
       }
     });
   }

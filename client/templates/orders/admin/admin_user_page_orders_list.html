@@ -1,8 +1,0 @@
-<template name="adminUserPageOrdersList">
-  <div class="orders page">
-    <h4>Заявки пользователя <a href="{{pathFor 'adminUserPage'}}">{{username}}</a></h4>
-    {{#each orders}}
-      {{> adminOrderItem}}
-    {{/each}}
-  </div>
-</template>

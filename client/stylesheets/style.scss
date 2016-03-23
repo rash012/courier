@@ -29,7 +29,7 @@ $black_10: rgba(0, 0, 0, 0.1);
   @extend %extend_1;
 }
 
-.order {
+.order,.block {
   @extend %extend_1;
   *zoom: 1;
   position: relative;
@@ -59,7 +59,7 @@ $black_10: rgba(0, 0, 0, 0.1);
     margin: 7px 12px 0 0;
     float: left;
   }
-  .order-content {
+  .order-content , .block-content{
     float: left;
     h3 {
       margin: 0;
@@ -88,31 +88,31 @@ $black_10: rgba(0, 0, 0, 0.1);
   }
 }
 
-.comments {
-  list-style-type: none;
-  margin: 0;
-  li {
-    @extend %extend_1;
-    h4 {
-      font-size: 16px;
-      margin: 0;
-      .date {
-        font-size: 12px;
-        font-weight: normal;
-      }
-      a {
-        font-size: 12px;
-      }
-    }
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
+//.comments {
+//  list-style-type: none;
+//  margin: 0;
+//  li {
+//    @extend %extend_1;
+//    h4 {
+//      font-size: 16px;
+//      margin: 0;
+//      .date {
+//        font-size: 12px;
+//        font-weight: normal;
+//      }
+//      a {
+//        font-size: 12px;
+//      }
+//    }
+//    p:last-child {
+//      margin-bottom: 0;
+//    }
+//  }
+//}
 
-.comment-form {
-  @extend %extend_1;
-}
+//.comment-form {
+//  @extend %extend_1;
+//}
 
 body {
   background: $color_gallery_approx;
@@ -221,4 +221,8 @@ body {
 .messages {
   height: 280px;
   overflow: auto;
+}
+
+.width-auto{
+  width: auto;
 }

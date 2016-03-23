@@ -10,7 +10,7 @@ Meteor.publish('orders', function (options) {
   }
   else return Orders.find({
     $or: [{ownerId: this.userId}, {ownerId: {$exists: false}}],
-    status: {$nin: [orderStatusExpired, orderStatusEdit]}
+    status: {$in: [orderStatusFree, orderStatusAccepted, orderStatusDone]}
   }, options);
 });
 

@@ -11,10 +11,16 @@ Template.acceptedOrderItem.events({
     });
   }
 });
-
+//todo: спросить про код
+var date = new ReactiveVar();
+var intervalId = Meteor.setInterval(function(){
+  date.set(new Date());
+},1000*60);
 Template.acceptedOrderItem.helpers({
   remainingTime: function () {
-    return;
+    date.set(new Date());
+    var remainingMinutes = Math.round((+this.accepted + orderExecutionLimit - date.get()) / (1000*60));
+    return  remainingMinutes + ' минут' + wordEnding(remainingMinutes);
   }
 });
 

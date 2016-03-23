@@ -1,9 +1,11 @@
 <template name="adminUserPage">
-  <div class="orders page">
+  <div class="page">
     <h4>Страница пользователя {{username}}</h4>
-    <a href="{{pathFor 'adminUserPageOrdersList'}}">Заявки пользователя</a>
-    {{#each orders}}
-      {{> adminOrderItem}}
-    {{/each}}
+    <form enctype="multipart/form-data" action="/upload/image" method="post">
+      <input id="image-file" type="file" />
+      <input type="submit">
+    </form>
+    <a href="{{pathFor 'adminUserOrdersList'}}">Заявки пользователя</a>
+    {{>userStatistics}}
   </div>
 </template>
