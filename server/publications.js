@@ -24,3 +24,7 @@ Meteor.publish('users', function () {
 Meteor.publish('messages', function () {
   return Messages.find();
 });
+
+Meteor.publish('uploads', function () {
+  return Uploads.find();
+});

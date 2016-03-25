@@ -29,28 +29,6 @@ Meteor.startup(function () {
   //  });
   //}
 
-  if (Meteor.users.find().count() === 0) {
-    Accounts.createUser({
-      username: 'admin',
-      email: 'admin@admin.admin',
-      password: ' ',
-      permissions: [
-        'admin.all'
-      ]
-    });
-
-    Accounts.createUser({
-      username: 'test',
-      email: '',
-      password: ' ',
-      permissions: [
-        ''
-      ]
-    });
-  }
-
-  adminId = Meteor.users.findOne({username: 'admin'})._id;
-
 
   //проверяем нет ли истекших заявок среди свободных и делаем их истекшими
   (function () {

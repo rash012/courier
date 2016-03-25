@@ -1,6 +1,7 @@
 <template name="usersList">
   <div class="page">
     <h4>Список пользователей</h4>
+    <a href="{{pathFor 'adminUserAdding'}}">Добавить пользователя</a>
     {{#each users}}
       {{> userItem}}
     {{/each}}

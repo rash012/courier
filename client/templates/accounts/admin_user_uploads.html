@@ -1,0 +1,16 @@
+<template name="adminUserUploads">
+  <div class="page">
+    <h4>Загруженные изображения пользователя <a href="{{pathFor 'adminUserPage'}}">{{username}}</a></h4>
+    <div class="images">
+      {{#each uploads}}
+        <div class="image-wrap">
+          <a href='{{url}}' rel='images' class="fancybox">
+            <img src='{{url}}'/>
+          </a>
+          <a id="remove-image" data-name="{{filename}}">удалить</a>
+        </div>
+      {{/each}}
+    </div>
+    {{> upload_bootstrap multiple=true formData=specificFormData fileTypes='.(gif|jpg|png)'}}
+  </div>
+</template>

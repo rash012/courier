@@ -21,6 +21,10 @@ $black_10: rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px $black_15;
 }
 
+h5{
+  font-size: 16px;
+}
+
 .grid-block {
   @extend %extend_1;
 }
@@ -29,7 +33,7 @@ $black_10: rgba(0, 0, 0, 0.1);
   @extend %extend_1;
 }
 
-.order,.block {
+.order, .block {
   @extend %extend_1;
   *zoom: 1;
   position: relative;
@@ -59,7 +63,7 @@ $black_10: rgba(0, 0, 0, 0.1);
     margin: 7px 12px 0 0;
     float: left;
   }
-  .order-content , .block-content{
+  .order-content, .block-content {
     float: left;
     h3 {
       margin: 0;
@@ -223,6 +227,25 @@ body {
   overflow: auto;
 }
 
-.width-auto{
+.width-auto {
   width: auto;
+}
+
+.images {
+  margin-bottom: 5px;
+  .image-wrap {
+    display: inline-block;
+    margin-right: 3px;
+    margin-bottom: 10px;
+    .fancybox {
+      display: block;
+      img {
+        height: 150px;
+      }
+    }
+    #remove-image {
+      cursor: pointer;
+    }
+  }
+
 }

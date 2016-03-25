@@ -27,3 +27,7 @@ check
 underscore
 ian:accounts-ui-bootstrap-3
 reactive-var
+tomi:upload-server
+tomi:upload-jquery
+mrt:fancybox
+cfs:standard-packages

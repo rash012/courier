@@ -1,4 +1,4 @@
-Template.accountCreate.events({
+Template.adminUserAdding.events({
   'submit form': function (e) {
     e.preventDefault();
 
@@ -12,14 +12,14 @@ Template.accountCreate.events({
       tel: $(e.target).find('[name=tel]').val(),
     };
 
-    Meteor.call('createAccount', account, function(error, result){
+    Meteor.call('addUser', account, function(error, result){
       if (error){
         return throwError(error.reason);
       }
       if (result){
-        if(result.accountExists) alert('Аккаунт с таким логином уже существует');
+        if(result.accountExists) alert('Пользователь с таким логином уже существует');
         else {
-          alert('Аккаунт успешно создан');
+          alert('Пользователь успешно добавлен');
           $('form').trigger('reset');
         }
       }

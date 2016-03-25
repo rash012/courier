@@ -1,11 +1,18 @@
 <template name="adminUserPage">
   <div class="page">
     <h4>Страница пользователя {{username}}</h4>
-    <form enctype="multipart/form-data" action="/upload/image" method="post">
-      <input id="image-file" type="file" />
-      <input type="submit">
-    </form>
-    <a href="{{pathFor 'adminUserOrdersList'}}">Заявки пользователя</a>
-    {{>userStatistics}}
+    <div class="main">
+      <h5>Информация</h5>
+      <div>Имя: {{profile.name}}</div>
+      <div>Фамилия: {{profile.surname}}</div>
+      <div>Номер телефона: {{profile.tel}}</div>
+
+      {{>userStatistics}}
+      <br>
+      <div><a href="{{pathFor 'adminUserEdit'}}">Редактировать данные пользователя</a></div>
+      <div><a href="{{pathFor 'adminUserOrdersList'}}">Заявки пользователя</a></div>
+      <div><a href="{{pathFor 'adminUserUploads'}}">Загруженные изображения пользователя</a></div>
+
+    </div>
   </div>
 </template>

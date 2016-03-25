@@ -1,0 +1,38 @@
+<template name="adminUserAdding">
+  <div class="page">
+    <h4>Добавление пользователя</h4>
+    <form class="main form">
+      <div class="form-group">
+        <label class="control-label" for="login">Логин (не менее 3-х символов)</label>
+        <div class="controls">
+          <input name="login" id="login" type="text" value="" placeholder="" class="form-control" required pattern=".{3,}" autocomplete="off"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="password">Пароль</label>
+        <div class="controls">
+          <input name="password" id="password" type="text" value="" placeholder="" class="form-control" required autocomplete="off"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="name">Имя</label>
+        <div class="controls">
+          <input name="name" id="name" type="text" value="" placeholder="" class="form-control" autocomplete="off"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="surname">Фамилия</label>
+        <div class="controls">
+          <input name="surname" id="surname" type="text" value="" placeholder="" class="form-control" autocomplete="off"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="tel">Номер телефона</label>
+        <div class="controls">
+          <input name="tel" id="tel" type="text" value="" placeholder="" class="form-control" autocomplete="off"/>
+        </div>
+      </div>
+      <input type="submit" value="Добавить пользователя" class="btn btn-primary"/>
+    </form>
+  </div>
+</template>
